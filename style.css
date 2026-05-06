@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe4f2, #fce7ff, #fff1f2);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 430px;
+    margin: 70px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(236, 72, 153, 0.25);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #be185d;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    box-sizing: border-box;
+    border: 2px solid #f9a8d4;
+    border-radius: 12px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #ec4899;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    background: linear-gradient(135deg, #ec4899, #db2777);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#darkModeBtn {
+    width: auto;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+}
+
+#logoutBtn {
+    background: #6b7280;
+}
+
+#userEmail {
+    text-align: center;
+    color: #9d174d;
+    font-size: 14px;
+}
+
+.note {
+    background: #fdf2f8;
+    border-left: 5px solid #ec4899;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 12px;
+}
+
+.note-text {
+    font-weight: bold;
+    color: #831843;
+}
+
+.note-date {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 5px;
+}
+
+.deleteBtn {
+    background: #f43f5e;
+    padding: 8px;
+    margin-top: 8px;
+}
+
+body.dark {
+    background: linear-gradient(135deg, #111827, #3b0764, #831843);
+}
+
+body.dark .container {
+    background: #1f2937;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark #userEmail {
+    color: #f9a8d4;
+}
+
+body.dark input {
+    background: #111827;
+    color: white;
+    border-color: #be185d;
+}
+
+body.dark .note {
+    background: #374151;
+}
+
+body.dark .note-text {
+    color: #fce7f3;
+}
+
+#notes {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.note {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+.note-text {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+.note-date {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.deleteBtn {
+    background: #ff4d88;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.deleteBtn:hover {
+    background: #ff1f6b;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.favoriteBtn {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    margin-bottom: 8px;
+}
+
+.editBtn {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    margin-bottom: 8px;
+}

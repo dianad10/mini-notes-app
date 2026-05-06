@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="darkModeBtn">🌙 Dark Mode</button>
+
+    <div class="container">
+        <h1>Mini Notes App 💖</h1>
+
+        <div id="loginSection">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Parolă">
+
+            <button id="registerBtn">Înregistrare</button>
+            <button id="loginBtn">Autentificare</button>
+        </div>
+
+    <div id="appSection" style="display:none;">
+    <h2>Notițele mele</h2>
+
+    <p id="userEmail"></p>
+
+    <button id="logoutBtn">Logout</button>
+
+    <input type="text" id="searchInput" placeholder="Caută în notițe 🔍">
+
+    <input type="text" id="noteInput" placeholder="Scrie o notiță">
+
+    <button id="addNoteBtn">Adaugă notiță</button>
+
+    <div id="notes"></div>
+</div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
