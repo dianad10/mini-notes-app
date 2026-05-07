@@ -2,7 +2,7 @@
 
 ## Dicu Diana Madalina – SIMPRE, grupa 1145
 
-Link video prezentare - 
+Link video prezentare - https://youtu.be/VR3Aw5Qr_3w
 
 Link aplicație publicată - https://chic-nougat-214fe4.netlify.app/
 
