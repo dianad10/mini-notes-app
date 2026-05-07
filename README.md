@@ -1,157 +1,93 @@
 # Mini Notes App 💖
 
-Proiect realizat de Diana Dicu
-Master SIMPRE
+## Dicu Diana Madalina – SIMPRE, grupa 1145
+Link video prezentare - 
+Link aplicație publicată - https://chic-nougat-214fe4.netlify.app/
+Repository GitHub - https://github.com/dianad10/mini-notes-app
 
----
-
-## Introducere
+1. Introducere
 
 Mini Notes App este o aplicație web realizată pentru proiectul la disciplina Cloud Computing.
 
-Scopul aplicației este gestionarea notițelor personale într-un mod simplu și rapid, folosind servicii cloud pentru autentificare și stocarea datelor.
+Aplicația permite utilizatorilor să își creeze cont, să se autentifice și să își gestioneze propriile notițe salvate în cloud.
 
-Utilizatorii își pot crea cont, se pot autentifica și își pot salva notițele în cloud, acestea rămânând disponibile chiar și după refresh-ul paginii.
+Pentru realizarea aplicației au fost utilizate servicii cloud oferite de Firebase, iar aplicația a fost publicată online folosind platforma Netlify.
 
-Aplicația a fost realizată folosind HTML, CSS și JavaScript și a fost publicată online cu ajutorul platformei Netlify.
+2. Descriere problemă
 
----
+Aplicația a fost realizată pentru gestionarea rapidă a notițelor personale într-un mod simplu și accesibil online.
 
-## Descrierea problemei
+Utilizatorii pot:
 
-În multe situații este util să existe o aplicație simplă pentru salvarea rapidă a informațiilor importante.
+crea cont;
+autentifica în aplicație;
+adăuga notițe;
+edita notițe;
+șterge notițe;
+căuta notițe;
+utiliza dark mode.
 
-Prin acest proiect am realizat o aplicație web care permite:
+Datele rămân salvate și după refresh datorită stocării în cloud.
 
-* autentificarea utilizatorilor;
-* salvarea notițelor personale;
-* căutarea rapidă a notițelor;
-* editarea și ștergerea acestora;
-* afișarea datelor salvate în cloud.
+3. Descriere API
+https://console.firebase.google.com/u/1/project/mini-notes-app-996ce/firestore/databases/-default-/data/~2Fnotes~2F68gYILH4TQ6ZyTHtl2vn
+Aplicația utilizează Firebase Authentication și Cloud Firestore prin intermediul Firebase SDK și API REST.
 
-Fiecare utilizator își poate vedea doar propriile notițe.
+Firebase Authentication
 
----
+Folosit pentru:
 
-## Tehnologii utilizate
+creare cont;
+autentificare;
+logout;
+persistența sesiunii utilizatorului.
+Cloud Firestore
 
-### Frontend
+Folosit pentru:
 
-* HTML
-* CSS
-* JavaScript
+salvarea notițelor în cloud;
+încărcarea notițelor;
+actualizarea și ștergerea datelor.
+4. Flux de date
 
-### Servicii cloud
-
-* Firebase Authentication
-* Cloud Firestore
-* Netlify
-* GitHub
-
----
-
-## Firebase Authentication
-
-Firebase Authentication a fost folosit pentru:
-
-* creare cont;
-* autentificare utilizatori;
-* logout;
-* persistența sesiunii după refresh.
-
----
-
-## Cloud Firestore
-
-Cloud Firestore a fost utilizat pentru:
-
-* salvarea notițelor în cloud;
-* stocarea datelor pentru fiecare utilizator;
-* afișarea automată a notițelor după autentificare.
-
----
-
-## Publicarea aplicației
-
-Aplicația a fost publicată online folosind Netlify.
-
-Link aplicație:
-https://chic-nougat-214fe4.netlify.app/
-
----
-
-## Fluxul aplicației
-
-La pornirea aplicației, utilizatorul poate:
-
-* crea un cont nou;
-* autentifica într-un cont existent.
+La deschiderea aplicației, utilizatorul poate crea un cont sau se poate autentifica folosind email și parolă.
 
 După autentificare:
 
-* poate adăuga notițe;
-* poate edita sau șterge notițe;
-* poate căuta notițe folosind search bar;
-* poate activa dark mode;
-* poate marca notițele favorite.
+utilizatorul poate adăuga notițe;
+datele sunt salvate în Cloud Firestore;
+notițele sunt afișate automat în aplicație;
+datele rămân salvate după refresh.
+Exemple request / response
+Adăugare notiță
+await addDoc(collection(db, "notes"), {
+  text: noteInput.value,
+  userId: currentUser.uid,
+  favorite: false,
+  date: new Date().toLocaleString("ro-RO")
+});
+Exemplu date salvate în Firestore
+{
+  "text": "Proiect Cloud Computing",
+  "favorite": false,
+  "date": "22.07.2025"
+}
+Metode HTTP utilizate
+POST → creare date
+GET → citire date
+PUT → actualizare date
+DELETE → ștergere date
+Autentificare și autorizare
 
-Datele sunt salvate automat în Firestore și rămân disponibile după refresh.
+Autentificarea este realizată folosind Firebase Authentication pe bază de email și parolă.
 
----
+5. Capturi ecran aplicație
+Pagina de autentificare - <img width="1918" height="1020" alt="image" src="https://github.com/user-attachments/assets/f52e6bce-702b-47ec-bea2-ed4c8450c2f2" />
+Dark mode - <img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/2e35b599-2b09-4d91-aeef-ca37abd7ef97" />
+Notițe salvate în Firestore - <img width="1913" height="931" alt="image" src="https://github.com/user-attachments/assets/6c674fcc-4022-4ea1-999d-6f7ee8e84d31" />
 
-## Exemple de funcționalități
-
-### Adăugare notiță
-
-Utilizatorul introduce textul unei notițe și apasă butonul „Adaugă notiță”.
-
-### Editare notiță
-
-Notițele pot fi modificate folosind butonul „Edit”.
-
-### Ștergere notiță
-
-Fiecare notiță poate fi ștearsă individual.
-
-### Search live
-
-Aplicația permite căutarea rapidă în notițe.
-
-### Dark mode
-
-Interfața poate fi schimbată între light mode și dark mode.
-
----
-
-## Capturi ecran
-
-### Pagina de autentificare
-
-<img width="1918" height="1020" alt="image" src="https://github.com/user-attachments/assets/f52e6bce-702b-47ec-bea2-ed4c8450c2f2" />
-
-### Dark mode
-
-<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/2e35b599-2b09-4d91-aeef-ca37abd7ef97" />
-
-### Notițe salvate în Firestore
-<img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/14cf586b-88ee-4a60-b6bf-b04d4c4e2a9a" />
-
----
-
-## Repository GitHub
-
-https://github.com/dianad10/mini-notes-app
-
----
-
-## Video prezentare
-
-LINK YOUTUBE NELISTAT
-
----
-
-## Concluzii
-
-Prin realizarea acestui proiect am învățat cum poate fi integrată o bază de date cloud într-o aplicație web și cum poate fi publicată o aplicație online.
-
-Proiectul utilizează servicii cloud pentru autentificare și stocarea datelor și oferă funcționalități moderne într-o interfață simplă și intuitivă.
+6. Referințe
+https://firebase.google.com/
+https://developer.mozilla.org/
+https://github.com/
+https://www.netlify.com/
