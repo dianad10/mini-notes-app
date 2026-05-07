@@ -65,7 +65,7 @@ Folosit pentru:
 - încărcarea notițelor;
   
 - actualizarea și ștergerea datelor.
-- 
+  
 4. Flux de date
 
 La deschiderea aplicației, utilizatorul poate crea un cont sau se poate autentifica folosind email și parolă.
@@ -109,7 +109,11 @@ Dark mode - <img width="1918" height="1017" alt="image" src="https://github.com/
 Notițe salvate în Firestore - <img width="1913" height="931" alt="image" src="https://github.com/user-attachments/assets/6c674fcc-4022-4ea1-999d-6f7ee8e84d31" />
 
 6. Referințe
+   
 https://firebase.google.com/
+
 https://developer.mozilla.org/
+
 https://github.com/
+
 https://www.netlify.com/
