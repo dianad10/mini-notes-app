@@ -22,18 +22,24 @@ Aplicația a fost realizată pentru gestionarea rapidă a notițelor personale �
 
 Utilizatorii pot:
 
-crea cont;
-autentifica în aplicație;
-adăuga notițe;
-edita notițe;
-șterge notițe;
-căuta notițe;
-utiliza dark mode.
+- crea cont;
+  
+- autentifica în aplicație;
+  
+- adăuga notițe;
+  
+- edita notițe;
+  
+- șterge notițe;
+  
+- căuta notițe;
+  
+- utiliza dark mode.
 
 Datele rămân salvate și după refresh datorită stocării în cloud.
 
 3. Descriere API
-4. 
+   
 https://console.firebase.google.com/u/1/project/mini-notes-app-996ce/firestore/databases/-default-/data/~2Fnotes~2F68gYILH4TQ6ZyTHtl2vn
 
 Aplicația utilizează Firebase Authentication și Cloud Firestore prin intermediul Firebase SDK și API REST.
@@ -42,27 +48,38 @@ Firebase Authentication
 
 Folosit pentru:
 
-creare cont;
-autentificare;
-logout;
-persistența sesiunii utilizatorului.
+- creare cont;
+  
+- autentificare;
+  
+- logout;
+  
+- persistența sesiunii utilizatorului.
+  
 Cloud Firestore
 
 Folosit pentru:
 
-salvarea notițelor în cloud;
-încărcarea notițelor;
-actualizarea și ștergerea datelor.
+- salvarea notițelor în cloud;
+  
+- încărcarea notițelor;
+  
+- actualizarea și ștergerea datelor.
+- 
 4. Flux de date
 
 La deschiderea aplicației, utilizatorul poate crea un cont sau se poate autentifica folosind email și parolă.
 
 După autentificare:
 
-utilizatorul poate adăuga notițe;
-datele sunt salvate în Cloud Firestore;
-notițele sunt afișate automat în aplicație;
-datele rămân salvate după refresh.
+-> utilizatorul poate adăuga notițe;
+
+->datele sunt salvate în Cloud Firestore;
+
+->notițele sunt afișate automat în aplicație;
+
+->datele rămân salvate după refresh.
+
 Exemple request / response
 Adăugare notiță
 await addDoc(collection(db, "notes"), {
