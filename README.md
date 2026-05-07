@@ -1,8 +1,11 @@
 # Mini Notes App 💖
 
 ## Dicu Diana Madalina – SIMPRE, grupa 1145
+
 Link video prezentare - 
+
 Link aplicație publicată - https://chic-nougat-214fe4.netlify.app/
+
 Repository GitHub - https://github.com/dianad10/mini-notes-app
 
 1. Introducere
@@ -30,7 +33,9 @@ utiliza dark mode.
 Datele rămân salvate și după refresh datorită stocării în cloud.
 
 3. Descriere API
+4. 
 https://console.firebase.google.com/u/1/project/mini-notes-app-996ce/firestore/databases/-default-/data/~2Fnotes~2F68gYILH4TQ6ZyTHtl2vn
+
 Aplicația utilizează Firebase Authentication și Cloud Firestore prin intermediul Firebase SDK și API REST.
 
 Firebase Authentication
